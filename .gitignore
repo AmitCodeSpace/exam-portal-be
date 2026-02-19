@@ -1,30 +1,24 @@
-HELP.md
-.gradle
+### Gradle ###
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### STS ###
-.apt_generated
+### STS (Spring Tool Suite) ###
+.apt_generated/
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
 ### NetBeans ###
 /nbproject/private/
@@ -35,3 +29,41 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Node (if frontend is included) ###
+node_modules/
+dist/
+
+### Logs ###
+logs/
+*.log
+TEST*.xml
+
+### OS-specific ###
+.DS_Store
+Thumbs.db
+
+### Java ###
+*.class
+
+### Python (if used in project) ###
+*.py[cod]
+
+### Reports / Tools ###
+.PVS-Studio
+
+### Maven (if mixed with Gradle) ###
+target/
+
+### Applications ###
+*.app
+*.exe
+
+### Large media files ###
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+*.pdf
