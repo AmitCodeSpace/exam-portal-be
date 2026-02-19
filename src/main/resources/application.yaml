@@ -1,0 +1,53 @@
+
+server:
+  port: 8085
+
+spring:
+  application:
+    name: exam-portal-be
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/exam_portal
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        jdbc:
+#          time_zone: UTC
+
+#  flyway:
+#    enabled: true
+#    table: schema_version
+#    locations: classpath:db/migration
+#    baseline-on-migrate: true
+#    baseline-version: 0
+
+
+app:
+  jwt:
+    keys:
+      private-key-path: keys/private-key.pem
+      public-key-path: keys/public-key.pem
+  jwt-expiration: 864000
+  refresh-token-expiration: 604800000 # 7 days
+
+logging:
+  level:
+    root: INFO
+    com.skytelteleservice.hrms: DEBUG
+  file:
+    path: logs
+
+security:
+  unauthenticated-urls: /api/v1/auth/**,/api/v1/public/**,/error,/v3/api-docs/**,/swagger-ui.html,/swagger-ui/**,/actuator/**
+
+
+
+
+
